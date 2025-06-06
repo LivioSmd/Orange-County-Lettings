@@ -1,0 +1,13 @@
+{# templates/500.html #}
+{% extends "base.html" %}
+
+{% block title %}Erreur serveur (500){% endblock %}
+
+{% block content %}
+  <div class="container text-center mt-5">
+    <h1>500 : Erreur interne du serveur</h1>
+    <p>Désolé, quelque chose s’est mal passé sur le serveur.</p>
+    <p>Si le problème persiste, contactez l’administrateur du site.</p>
+    <a href="{% url 'index' %}" class="btn btn-primary">Retour à l’accueil</a>
+  </div>
+{% endblock %}
