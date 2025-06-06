@@ -10,6 +10,10 @@ class Address(models.Model):
     zip_code = models.PositiveIntegerField(validators=[MaxValueValidator(99999)])
     country_iso_code = models.CharField(max_length=3, validators=[MinLengthValidator(3)])
 
+    class Meta:  # add to manage singular and plural in the admin area of the site
+        verbose_name = "adresse"
+        verbose_name_plural = "adresses"
+
     def __str__(self):
         return f'{self.number} {self.street}'
 
